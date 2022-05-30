@@ -1,0 +1,1 @@
+Don't forget to rename `.env.template` to `.env`
