@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block content %}
+
+<ol>
+    {% for genre in genres %}
+    <li>
+        <a href="{{ url_for('genre', id=genre.id) }}">{{ genre.name }} </a>
+    </li>
+    {% endfor %}
+</ol>
+
+
+{% endblock content %}

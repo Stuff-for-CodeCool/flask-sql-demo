@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block content %}
+
+<h1>Top 30 shows</h1>
+
+<ol>
+    {% for show in shows %}
+    <li>
+        <a href="{{ url_for('show', id=show.id) }}">{{ show.title }} </a>
+    </li>
+    {% endfor %}
+</ol>
+
+{% if pages %}
+<ol>
+    {% for page in range(pages) %}
+    <li>
+        <a href="{{ url_for('index', page_number=page) }}">Page {{ page }}</a>
+    </li>
+    {% endfor %}
+</ol>
+{% endif %}
+
+{% endblock content %}

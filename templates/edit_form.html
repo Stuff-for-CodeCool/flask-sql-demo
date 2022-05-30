@@ -1,0 +1,18 @@
+{% extends "layout.html" %} {% block content %}
+
+<form action="{{ url_for('edit_show', id=id) }}" method="POST">
+    <label for="title">Title:</label><br />
+    <input type="text" id="title" name="title" value="{{ title }}" /><br />
+
+    <label for="rating">Rating:</label><br />
+    <input type="text" id="rating" name="rating" value="{{ rating }}" /><br />
+
+    <label for="overview">Overview:</label><br />
+    <textarea name="overview" id="overview" cols="30" rows="10">
+{{ overview }}</textarea
+    ><br />
+
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock content %}
